@@ -1,11 +1,13 @@
 const createCredentialOptions = {
     publicKey: {
-        challenge: new Uint8Array([/* 生成一個隨機的挑戰值 */]),
+        const challenge = new Uint8Array(32); // 生成 32 個隨機的位元組
+        crypto.getRandomValues(challenge); // 使用 crypto.getRandomValues() 方法填充挑戰值,
         rp: {
+            id:'webauthn.me',
             name: 'WebAuthn Demo',
         },
         user: {
-            id: new Uint8Array([/* 填寫用戶的唯一識別 */]),
+            id: new Uint8Array(20010922),
             name: 'user@example.com',
             displayName: 'User',
         },
