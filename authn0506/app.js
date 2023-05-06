@@ -10,11 +10,15 @@ const createCredentialOptions = {
             displayName: 'User',
         },
         pubKeyCredParams: [
-            {
-                type: 'public-key',
-                alg: -257, // 表示使用ES256算法
-            }
-        ],
+    {
+        type: 'public-key',
+        alg: -7, // ES256 算法的識別符
+    },
+    {
+        type: 'public-key',
+        alg: -257, // RS256 算法的識別符
+    }
+],
         authenticatorSelection: {
             authenticatorAttachment: 'platform',
         },
