@@ -12,7 +12,7 @@ const createCredentialOptions = {
         pubKeyCredParams: [
             {
                 type: 'public-key',
-                alg: -7, // 表示使用ES256算法
+                alg: -257, // 表示使用ES256算法
             }
         ],
         authenticatorSelection: {
